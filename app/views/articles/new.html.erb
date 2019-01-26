@@ -1,15 +1,5 @@
 <h1 class="text-danger menutxt">Create New Article</h1>
 
 <%= render 'form', article: @article %>
-<script>
-    $(document).ready(function() {
-        $('#summernote').summernote({
-            placeholder: 'Enter Description',
-            tabsize: 2,
-            height: 300
-        });
-        
-    });
-  </script>
 <%= link_to 'Back', articles_path , class: "btn btn-warning btnmod" %>
 <br><br><br><br><br><br>
