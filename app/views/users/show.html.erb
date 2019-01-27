@@ -1,14 +1,31 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<img src="/user.png" class="rounded mx-auto d-block">
+<h1 class="text-danger text-center"><%= @user.username %></h1>
+<p class="text-dark text-center"><%= @user.email %></p>
+<hr>
+<p class="text-dark text-center"><b>My Articles</b></p>
+<div> 
+        <% @user.articles.each do |article| %>
+          <div class="row" style="margin-bottom: 10px;">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title text-dark text-uppercase"><%= article.title %></h2>
+                  <p class="card-text"><%= truncate(article.description, length: 150) %></p>
+                  <hr>
+                  <p class="card-text"><b>Written by:</b> <%= article.user.username if article.user%></p>
+                  <p class="card-text"><b>Created at:</b> <%= article.created_at %></p>
+                  <p class="card-text"><b>Updated at:</b> <%= article.updated_at %></p>
+                  <br>
+                  <div class="float-right">
+                    <%= link_to 'Show', article, class: "btn btn-success" %>
+                    <%= link_to 'Edit', edit_article_path(article), class: "btn btn-info" %>
+                    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+<hr>
