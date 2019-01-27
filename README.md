@@ -2,7 +2,6 @@ Simple blog app using ruby on rails
 
 Screenshots
 
-![screenshot1](http://url/to/img.png)
 ![screenshot2](https://i.ibb.co/xfBfkHZ/Screenshot-from-2019-01-27-21-55-26.png)
 ![screenshot3](https://i.ibb.co/v32sLMt/Screenshot-from-2019-01-27-21-55-46.png)
 ![screenshot4](https://i.ibb.co/3pWN8Z7/Screenshot-from-2019-01-27-21-55-48.png)
