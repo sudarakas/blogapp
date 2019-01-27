@@ -13,9 +13,13 @@
         <%= link_to "Create Articles", new_article_path, class: "nav-link text-danger", id:"menutext"%>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-danger my-2 my-sm-0 text-uppercase" type="submit">Search</button>
-    </form>
+    <ul class="navbar-nav my-2 my-lg-0">
+      <li class="nav-item">
+        <%= link_to "Register", new_user_path, class: "nav-link text-danger", id:"menutext"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Login", new_article_path, class: "nav-link text-danger", id:"menutext"%>
+      </li>
+    </ul>
   </div>
 </nav>

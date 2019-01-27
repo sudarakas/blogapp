@@ -9,6 +9,11 @@
     <%= @article.description %>
   </p>
   <hr>
+  <p class="btn btn-dark">
+  <strong>Written by:</strong>
+  <%= @article.user.username if @article.user %>
+</p>
+
   <p class="btn btn-success">
   <strong>Created at:</strong>
   <%= @article.created_at %>

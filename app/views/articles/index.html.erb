@@ -14,6 +14,8 @@
                 <div class="card-body">
                   <h2 class="card-title text-dark text-uppercase"><%= article.title %></h2>
                   <p class="card-text"><%= truncate(article.description, length: 150) %></p>
+                  <hr>
+                  <p class="card-text"><b>Written by:</b> <%= article.user.username if article.user%></p>
                   <p class="card-text"><b>Created at:</b> <%= article.created_at %></p>
                   <p class="card-text"><b>Updated at:</b> <%= article.updated_at %></p>
                   <br>

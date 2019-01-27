@@ -10,18 +10,31 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+<form>
+  <div class="form-group">
+    <label for="username">
+      <%= form.label :username %>
+     </label>
+    <%= form.text_field :username, class: "form-control", placeholder: "Enter Username" %>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="form-group">
+    <label for="title">
+      <%= form.label :email %>
+    </label>
+    <%= form.email_field :email, class: "form-control", placeholder: "Enter Email" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+   <div class="form-group">
+    <label for="title">
+      <%= form.label :password %>
+    </label>
+    <%= form.password_field :password, class: "form-control", placeholder: "Enter Password" %>
+  </div>
+
+  <br>
+  <div class="form-group">
+    <%= form.submit(@user.new_record? ? "Register Now" : "Save", class: "btn btn-danger") %>
   </div>
 <% end %>
+</form>
